@@ -13,6 +13,12 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find_by(id: params[:id])
   end
 
+  def destroy
+    tweet = Tweet.find_by(id: params[:id])
+    tweet.destroy
+    redirect_to('/')
+  end
+
   def update
     tweet = Tweet.find_by(id: params[:id])
     tweet.content = params[:content]

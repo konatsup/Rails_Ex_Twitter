@@ -7,6 +7,7 @@
     <% @tweets.each do |tweet| %>
       <li><%= tweet.content %>
         <%= link_to("編集", "/tweets/#{tweet.id}/edit") %>
+        <%= link_to("削除", "/tweets/#{tweet.id}/destroy", {method: "post"}) %>
       </li>
     <% end %>
   </ul>
