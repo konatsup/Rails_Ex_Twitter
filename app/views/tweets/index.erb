@@ -1,5 +1,11 @@
+<div>
+<%= form_tag("/tweets/create") do %>
+<textarea name="content"></textarea>
+<input type="submit" value="投稿する">
+<% end %>
 <ul>
 <% @tweets.each do |tweet| %>
 <li> <%= tweet.content %></li>
 <% end %>
 </ul>
+</div>
