@@ -1,4 +1,4 @@
 <%= form_tag("/tweets/#{@tweet.id}/update") do %>
 <textarea name="content"><%= @tweet.content%></textarea>
-<input type="submit" value="投稿する">
+<input type="submit" value="更新する">
 <% end %>
